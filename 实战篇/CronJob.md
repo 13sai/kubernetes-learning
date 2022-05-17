@@ -38,18 +38,18 @@ spec:
 
 > kubectl apply -f cronjob.yaml
 
-![](cronjob.png)
+![](images/cronjob.png)
 
 运行没问题，加入发现job有问题，需要立即终止怎么办呢？如何删除正在运行的 job？
 
 > kubectl delete pod xxx
 
-![](deletejob.png)
+![](images/deletejob.png)
 
 可以看见立即生成了另一个，继续delete。
 
 > kubectl delete pod xxx --grace-period 0 --force
-![](deletejob2.png)
+![](images/deletejob2.png)
 
 虽然强制杀死了一个，但还是生成了一个，有一次失败了。
 
@@ -59,4 +59,4 @@ PS: cj 是 cronjob的别名
 > kubectl delete cj hello 
 > kubectl delete pod xxx --grace-period 0 --force
 
-![](deletejob3.png)
+![](images/deletejob3.png)
