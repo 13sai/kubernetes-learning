@@ -3,6 +3,8 @@
 - Service
 - Deployment
 - kubectl port-forward
+
+
 ## 编写yaml
 
 ```yaml
@@ -93,7 +95,8 @@ kubectl port-forward svc/sai 8088:80
 ```
 
 ![](images/clusterip-service.png)
-访问成功！
+
+可以看到请求是成功！ http://127.0.0.1:8088/
 
 当然，也可以使用  **NodePort** 
 ```yaml

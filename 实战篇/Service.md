@@ -1,3 +1,9 @@
+
+涉及的知识点：
+- Service
+- Endpoints
+
+
 ## 外部服务 Service
 需注意 Service 是一个不带 selector 的，否则就会自动创建 Endpoint，name 保持一致即可。
 ```yaml
